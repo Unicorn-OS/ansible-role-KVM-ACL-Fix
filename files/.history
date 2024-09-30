@@ -1,0 +1,12 @@
+#sudo usermod -a -G kvm $USER
+#sudo systemctl restart libvirtd.service 
+#sudo usermod -G libvirt -a $USER
+#sudo reboot 
+
+# Works:
+setfacl -m user:libvirt-qemu:--x /home/me
+setfacl -m user:libvirt-qemu:--x /home/me/
+setfacl -m user:libvirt-qemu:--x /home/me/.uni
+setfacl -m user:libvirt-qemu:--x /home/me/.uni/
+setfacl -m user:libvirt-qemu:--x /home/me/.uni/iso
+setfacl -m user:libvirt-qemu:--x /home/me/.uni/iso/
